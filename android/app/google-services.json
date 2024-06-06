@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "667927832152",
+    "firebase_url": "https://temphumid-7f823-default-rtdb.firebaseio.com",
+    "project_id": "temphumid-7f823",
+    "storage_bucket": "temphumid-7f823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667927832152:android:3ffcbc583d43ab33420c2d",
+        "android_client_info": {
+          "package_name": "com.example.humidtemp_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrPJ821iqZSmf_mEPKO3YRfW03LtEXV_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
