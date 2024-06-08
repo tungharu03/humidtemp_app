@@ -35,7 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
           _humidity = data['humidity'].toInt();
         });
 
-        // Lưu dữ liệu vào Firestore
         _saveDataToFirestore(data);
       } else {
         print('No data available');
@@ -49,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _firestore.collection('measurements').add({
       'temperature': data['temperature'],
       'humidity': data['humidity'],
-      'timestamp': DateTime.now(), // Thêm timestamp để ghi lại thời gian đo
+      'timestamp': DateTime.now(), 
     }).then((value) {
       print('Data saved to Firestore');
     }).catchError((error) {
@@ -86,12 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _getData,
-              child: const Text('Đo'),
+              child: const Text('Measure'),
             ),
             IconButton(
               icon: const Icon(Icons.save),
               onPressed: _readDataFromFirestore,
-              tooltip: 'Đọc dữ liệu từ Firestore',
+              tooltip: 'Read data to Firestore',
             ),
           ],
         ),

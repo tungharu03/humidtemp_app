@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false, 
             home: Scaffold(
               body: Center(
                 child: CircularProgressIndicator(),
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           );
         } else if (snapshot.hasError) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             home: Scaffold(
               body: Center(
                 child: Text('Error initializing Firebase: ${snapshot.error}'),
@@ -33,12 +35,13 @@ class MyApp extends StatelessWidget {
           );
         } else {
           return MaterialApp(
-            title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
+            title: 'Smart City',
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            home: const MyHomePage(title: 'Smart City'),
           );
         }
       },
