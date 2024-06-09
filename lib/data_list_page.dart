@@ -52,7 +52,7 @@ class _DataListPageState extends State<DataListPage> {
               onPressed: () {
    
                 double? temperature = double.tryParse(tempController.text);
-                int? humidity = int.tryParse(humidityController.text);
+                double? humidity = double.tryParse(humidityController.text);
 
                 if ((temperature != null && temperature != doc['temperature']) || 
                     (humidity != null && humidity != doc['humidity'])) {
