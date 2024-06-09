@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   double _temperature = 0.0;
-  int _humidity = 0;
+  double _humidity = 0.0;
 
   @override
   void initState() {
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
         print('Data received: $data');
         setState(() {
           _temperature = data['temperature'].toDouble();
-          _humidity = data['humidity'].toInt();
+          _humidity = data['humidity'].toDouble();
         });
 
         _saveDataToFirestore(data);
